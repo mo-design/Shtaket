@@ -1,0 +1,102 @@
+.manufact {
+
+	padding: 10px 0 40px;
+}
+
+
+
+@include respond(iphone) {
+		.manufact .col-1-2 {    
+			float: none;
+			margin: 10px;
+			width: 95%;
+	}} 
+
+
+@include respond(l_iphone) {
+		.manufact .col-1-2 {    
+			float: none;
+			margin: 10px;
+			width: 95%;
+	}} 
+
+
+.manufact__text {
+	font: 13px $font_sb;
+	text-transform: uppercase;
+	
+	p {padding-bottom: 20px;}
+
+}
+
+
+
+
+.sklad {
+
+	padding: 10px 0 40px;
+	background: $color_green;
+	background: url(../img/bg_green.jpg) repeat;
+	text-align: center;
+	position: relative;
+
+	h2 {color: $color_white;}
+
+
+	
+
+
+}
+
+.sklad__text p {color: $color_white; padding: 30px 0; text-align: left;}
+
+@include respond(iphone){
+	.col-1-2 {float: none; width: 100%; margin: 10px;}
+	.sklad__text p {padding: 10px 0;}
+	.sklad .wrapper img {position: absolute; top: 550px; left: 0; max-width: 95%; max-height: 197px;}
+	.sklad__box {padding-bottom: 180px;}
+}
+
+
+
+@include respond(l_iphone){
+	.col-1-2 {float: none; width: 100%; margin: 10px;}
+	.sklad__text p {padding: 10px 0;}
+}
+
+
+.dillers {
+
+	padding: 10px 0 60px;
+	text-align: center;
+
+	.wrapper {
+
+	 background: url(../img/map.png) repeat;
+
+	}
+}
+
+
+@include respond(desktop) {.dillers p{width: 60%; margin: 0 auto;}}
+
+.dillers .bbut {margin: 0 auto; width: 220px; margin-bottom: 50px; padding: 15px 0;}
+@include respond(l_iphone){.dillers .bbut {width: 300px;}}
+@include respond(ipad){.dillers .bbut {width: 340px;  font: 37px $font_eb; line-height: 1.1;}}
+@include respond(l_ipad){.dillers .bbut {width: 370px;  font: 40px $font_eb; line-height: 1.1;}}
+@include respond(desktop){.dillers .bbut {width: 370px; font: 40px $font_eb; line-height: 1.1;}}
+
+
+#dillers__tel {display: block; margin: 50px auto; padding: 5px 10px;}
+
+.dillers {
+	background: url(../img/map.svg) no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
+
+
+#dillers__tel {border: 1px solid #939598;}
+#dillers__tel:focus {outline:none;}
+#dillers__tel:active {outline:none;}
+

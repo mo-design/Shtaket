@@ -1,0 +1,35 @@
+
+
+
+@import 'components/normalize';
+@import 'components/vars';
+@import 'components/fonts';
+@import 'components/slick';
+@import 'components/slick-theme';
+@import 'components/setka';
+@import 'components/header';
+@import 'components/product';
+@import 'components/design';
+@import 'components/prices';
+@import 'components/works';
+@import 'components/manufact';
+@import 'components/footer';
+@import 'components/windows';
+
+
+body {
+	font: 13px $font_sb;
+	line-height: 1.5;	
+
+
+	a {text-decoration: none;}
+}
+
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+

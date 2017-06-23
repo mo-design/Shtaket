@@ -1,0 +1,37 @@
+footer {
+	padding: 10px 0 40px;
+	background: $color_green;
+	background: url(../img/bg_green.jpg) repeat;
+	text-align: center;
+
+	h2 {color: $color_white;}
+
+	p {
+		font: 13px $font;
+		color: $color_white; 
+		padding: 5px 0; 
+		text-align: left;
+
+	}
+
+}
+
+
+
+.adress_tel  {font: 15px $font;}
+.adress_city {
+	        text-transform: uppercase; 
+			font: 14px $font; 
+			padding-bottom: 3px;}
+
+.ri1 {
+	float: right;
+	display: inline-block;
+	padding-right: 50px;
+}
+
+.ri2 {padding-left: 50px;}
+
+
+@include respond(iphone){footer p {text-align: center; } .ri1, .ri2 {float: none; padding: 0;} }
+@include respond(l_iphone){footer p {text-align: center; } .ri1, .ri2 {float: none; padding: 0;} }

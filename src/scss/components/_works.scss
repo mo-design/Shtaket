@@ -1,0 +1,157 @@
+.works {
+	
+	padding: 10px 0 40px;
+	h2 {color: $color_red;}
+
+}
+
+.works__plitka {
+	width: 100%;
+}
+
+.works__pic {
+	float: left; 
+	margin: 10px; 
+	}
+
+.works__pic img {width: 280px; }
+
+@include respond(l_iphone){.works__pic img {width: 210px;}}
+@include respond(ipad){.works__pic img {width: 350px;}}
+@include respond(l_ipad){.works__pic img {width: 300px;}}
+@include respond(desktop){.works__pic img {width: 370px;}}
+
+
+
+
+
+.responds {
+
+	padding: 10px 0 40px;
+	background: $color_red;
+	background: url(../img/bg_red.jpg) repeat;
+	text-align: center;
+
+	h2 {color: $color_white;}
+	p {color: $color_white; text-align: center; font: 14px $font;}
+
+	a {
+		font: 12px $font;
+		color: $color_white;
+		text-transform: uppercase;
+
+		&:hover {color: $color_yellow;}
+	}
+
+	.wrapper {padding: 0 0 40px;}
+}
+
+
+.responds__slider {margin: 0 20px;}
+
+
+.responds__box {
+	position: relative;
+	padding: 0 5px;
+}
+
+
+
+p.responds__name {
+	font: 22px $font_tit;
+	line-height: 0.9;
+	padding: 5px 0 2px;
+}
+
+p.responds__city, p.responds__city4 {
+	font: 20px $font;
+	padding-bottom: 40px;
+}
+
+
+
+//**** 5 stars ****
+
+
+
+
+p.responds__city:after {
+	content: url(../img/stars.png);
+	position: absolute;
+	top: 60px;
+	left: 65px;
+}
+
+@include respond(l_iphone){
+	p.responds__city:after{
+	content: url(../img/stars.png);
+	position: absolute;
+	top: 60px;
+	left: 55px;}
+}
+
+@include respond(ipad){
+	p.responds__city:after{
+	content: url(../img/stars.png);
+	position: absolute;
+	top: 60px;
+	left: 62px;}
+}
+
+@include respond(l_ipad){
+	p.responds__city:after{
+	content: url(../img/stars.png);
+	position: absolute;
+	top: 60px;
+	left: 103px;}
+}
+
+@include respond(desktop){
+	p.responds__city:after{
+	content: url(../img/stars.png);
+	position: absolute;
+	top: 60px;
+	left: 135px;}
+}
+
+
+//**** 4 stars ****
+
+p.responds__city4:after {
+	content: url(../img/stars4.png);
+	position: absolute;
+	top: 60px;
+	left: 65px;
+}
+
+@include respond(l_iphone){
+	p.responds__city4:after{
+	content: url(../img/stars4.png);
+	position: absolute;
+	top: 60px;
+	left: 55px;}
+}
+
+@include respond(ipad){
+	p.responds__city4:after{
+	content: url(../img/stars4.png);
+	position: absolute;
+	top: 60px;
+	left: 62px;}
+}
+
+@include respond(l_ipad){
+	p.responds__city4:after{
+	content: url(../img/stars4.png);
+	position: absolute;
+	top: 60px;
+	left: 103px;}
+}
+
+@include respond(desktop){
+	p.responds__city4:after{
+	content: url(../img/stars4.png);
+	position: absolute;
+	top: 60px;
+	left: 135px;}
+}

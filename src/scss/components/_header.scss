@@ -1,0 +1,306 @@
+
+.logo {
+	position: fixed;
+	top: 5px;
+	left: 10px;
+	z-index: 2;
+}
+
+
+.call {
+	position: fixed;
+	top: 5px;
+	right: 5px;
+	z-index: 2;
+	width: 60px;
+	height: 60px;
+	background: $color_green;
+	border-radius: 20px;
+	border: 3px solid $color_white;
+	outline: none;
+	cursor: pointer;
+
+	img {
+		margin: 10px;
+	}
+
+}
+
+
+
+
+
+.top {
+	width: 100%;
+	height: 45px;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	background: $color_white;
+	box-shadow: 2px 2px 1px rgba(50, 50, 50, 0.75);
+	
+
+	 ul { 
+	 	display: table; 
+	 	position: relative;
+	 	margin: 0 auto;
+	}
+
+	 li {
+		list-style: none;
+		float: left;
+	}
+
+	.current {display: table-cell;}
+
+
+	a, .current a{
+		padding: 0 7px;
+		text-decoration: none;
+		color: $color_green;
+		font: 14px $font;
+		line-height: 45px;
+
+		&:hover{color: $color_yellow;}
+	}
+
+
+}
+
+
+ @media only screen and (min-width: 521px) and (max-width: 700px) {
+
+	.top {
+
+		a, .current a {
+		padding: 0 2px;
+		font: 10px $font;
+		line-height: 45px;
+		}	
+	}
+
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 520px) {
+
+			.logo {left: 38%;}
+
+			.top ul {margin: 0; padding-top: 46px;}
+	
+	
+			.top li {display: none; float: none; background: $color_white;}
+
+
+			.top a {
+				display: table-cell;
+				padding: 0 100px 0 10px;
+				line-height: 30px;
+			}
+
+
+			.top ul:before {
+				position: absolute;
+				top: 15px; left: 5px;
+				z-index: 50;
+				content: url(../img/mobil_menu.svg);
+
+
+			}
+
+		
+			.top li:hover .top ul:before {content:"";}
+
+			.top ul:hover li {display: block;}
+			
+}
+
+
+
+
+.fon {
+	    background: url(../img/fon_w1.jpg);
+ 		background-repeat: no-repeat;
+		background-size: fixed;
+		background-position: top;
+		text-align: center;
+		height: 260px;
+		border: 1px solid $color_green;
+
+	}
+
+
+@include respond(l_iphone) 	{
+	.fon {background: url(../img/fon_w2.jpg);
+		background-repeat: no-repeat;
+		background-size: fixed;
+		background-position: top;
+		height: 300px;
+		}
+	}
+
+@include respond(ipad) 	{
+	.fon {background: url(../img/fon_w3.jpg);
+		background-repeat: no-repeat;
+		background-size: fixed;
+		background-position: top;
+		height: 370px;
+		}
+	}
+
+@include respond(l_ipad) 	{
+	.fon {background: url(../img/fon_w4.jpg);
+		background-repeat: no-repeat;
+		background-size: fixed;
+		background-position: top;
+		height: 470px;
+		}
+	}
+
+
+@include respond(desktop) 	{
+	.fon {background: url(../img/fon_w5.jpg);
+		background-repeat: no-repeat;
+		background-size: fixed;
+		background-position: top;
+		height: 620px;
+	}
+}
+
+
+h1 {
+	color: $color_white;
+	font: 20px $font_tit;
+	padding-top: 40px;
+
+	span {color: $color_yellow;}
+}
+
+@include respond(l_iphone) {h1{font: 32px $font_tit; padding-top: 20px;}}
+@include respond(ipad)     {h1{font: 48px $font_tit; padding-top: 5px;}}
+@include respond(l_ipad)   {h1{font: 60px $font_tit; padding-top: 5px;}}
+@include respond(desktop)  {h1{font: 65px $font_tit; padding-top: 0;}}
+
+.bbut {
+
+	width: 190px;
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	margin: 30px 0 20px;
+	padding: 10px;
+	border-radius: 25px;
+    border: none;
+    background: $color_yellow;
+    background: linear-gradient(#aba300, #fff200 10%, #fff200 90%, #aba300);
+    box-shadow: 0px 1px 15px -1px rgba(0,0,0,0.75);
+    color: $color_green;
+    text-align: center;
+   	font: 25px $font_eb;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.1;
+    text-decoration: none;
+    transition-duration: 0.4s;
+
+    &:active {
+    	background: #ffde2f;
+		background: linear-gradient(#a9931f, #ffde2f 10%, #ffde2f 90%, #a9931f);
+    	box-shadow: 0px 1px 15px -1px rgba(0,0,0,0.75);
+    	}
+
+}
+
+@include respond(l_iphone) {
+	.bbut {
+	width: 250px;
+	margin: 25px 0 200px;
+	font: 33px $font_eb;
+	line-height: 1.1; 
+	}
+}
+
+@include respond(ipad) {
+	.bbut {
+	width: 290px;
+	margin: 40px 0 200px; 
+	font: 38px $font_eb;
+	line-height: 1.1; 
+	}
+}
+
+@include respond(l_ipad) {
+	.bbut {
+	width: 370px;
+	margin: 80px 0 100px; 
+	font: 48px $font_eb;
+	line-height: 1.1;
+	padding: 15px 10px;
+	}
+}
+
+@include respond(desktop) {
+	.bbut {
+	width: 370px;
+	margin: 100px 0 100px; 
+	font: 48px $font_eb;
+	line-height: 1.1;
+	padding: 20px 10px;
+	}
+}
+
+
+
+
+
+
+//--------------------PLUSES------------------------------------------
+
+
+
+.pluses {
+
+	background: $color_white;
+	box-shadow: 2px 1px 20px -1px rgba(0,0,0,0.75);
+	overflow: hidden;
+
+	@include respond(iphone){
+		.col-1-3{    
+			float: left;
+			width: 130px;
+			margin: 10px;
+	}} 
+
+
+	.wrapper {padding: 30px 0 20px; }
+
+	@include respond(ipad) {.wrapper {padding: 40px 0 20px;}}
+	@include respond(l_ipad) {.wrapper {padding: 50px 0 20px;}}
+	@include respond(desktop) {.wrapper {padding: 50px 0 20px;}}
+
+
+
+}
+
+.pluses__box {
+	text-align: center;
+	height: 190px;
+	
+	p {
+		color: $color_green;
+		font: 16px $font_sb;
+		padding-top: 10px;
+	}
+}
+
+
+@include respond(l_iphone) {height: 170px;}
+@include respond(ipad) {height: 100px;}
+@include respond(l_ipad) {height: 80px;}
+@include respond(desktop) {height: 40px;}
+

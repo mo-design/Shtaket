@@ -1,0 +1,62 @@
+.colors {
+
+	padding: 10px 0;
+
+	h2 {color: $color_red;}
+
+	p {padding: 10px 0;}
+
+
+}
+
+
+	@include respond(iphone){.colors .col-1-2 {float: none; width: 280px;}}
+
+
+.colors__slider { margin: 50px 15px 0; }
+.prtech__slider { margin: 50px 15px 0; }
+
+.colors__text {margin: 50px 0;}
+
+
+.design {
+
+	padding: 10px 0 40px;
+	background: $color_green;
+	background: url(../img/bg_green.jpg) repeat;
+	text-align: center;
+
+	h2 {color: $color_white;}
+
+	p {color: $color_white; padding: 30px 20px; text-align: center;}
+
+	
+}
+
+
+@include respond(desktop)  {.design p {padding: 30px 100px;}}
+
+.design__zabor {
+	float: left; 
+	margin: 20px 10px;
+	text-align: center;
+
+
+	div {padding: 10px 0;}
+
+	p {
+		display: inline-block;
+		background: $color_yellow;
+		color: $color_green;
+		padding: 0 3px;
+
+	}
+}
+
+@include respond(iphone)   {.design__zabor img {width: 279px;}}
+@include respond(l_iphone) {.design__zabor img {width: 219px;}}
+@include respond(ipad)     {.design__zabor img {width: 233px;}}
+@include respond(l_ipad)   {.design__zabor img {width: 305px;}}
+@include respond(desktop)  {.design__zabor img {width: 320px; margin: 0 29px;}}
+
+

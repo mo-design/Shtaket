@@ -1,0 +1,198 @@
+h2 {	
+	color: $color_green;
+	font: 30px $font_tit;
+	text-align: center;
+	padding: 50px 0 30px;
+}
+
+
+@include respond(l_iphone) {h2 {font: 37px $font_tit;}}
+@include respond(ipad) {h2 {font: 42px $font_tit;}}
+@include respond(l_ipad) {h2 {font: 50px $font_tit;}}
+@include respond(desktop) {h2 {font: 50px $font_tit;}}
+@include respond(iphone) {h2 {padding: 30px 0 20px;}}
+
+h3 {
+	color: $color_red;
+	font: 18px $font_tit;
+	text-align: center;
+	padding: 50px 0 20px;
+}
+
+
+@include respond(l_iphone) {h3 {font: 28px $font_tit;}}
+@include respond(ipad) {h3 {font: 24px $font_tit; text-align: left;}}
+@include respond(l_ipad) {h3 {font: 28px $font_tit; text-align: left;}}
+@include respond(desktop) {h3 {font: 35px $font_tit; text-align: left;}}
+
+
+.why {
+
+
+	h2 {color: $color_red;
+		padding: 50px 0 20px;
+	}
+
+	.wrapper {position: relative; }
+
+
+}
+
+
+.why__box {width: 100%;}
+
+
+
+.why__text {
+	width: 100%;
+	padding: 0 10px;
+	
+	p {
+	color: $color_black;
+	font: 14px $font;
+	line-height: 1.5;
+	text-align: left;
+	}
+}
+@include respond(ipad) {.why__text {width: 50%; float: right; padding-top: 20px;}}
+@include respond(l_ipad) {.why__text {width: 50%; float: right; padding-top: 40px;}}
+@include respond(desktop) {.why__text {width: 50%; float: right; padding-top: 50px;}}
+
+.why__shema {
+	
+}
+
+@include respond(l_iphone){.why__shema {margin-left: 100px;}}
+@include respond(ipad){.why__shema {margin-left: 15px;}}
+@include respond(l_ipad){.why__shema {
+	position: absolute;
+	top: 325px; left: 670px;}	
+}
+@include respond(desktop){.why__shema {
+	position: absolute;
+	top: 330px; left: 610px;}
+}
+
+
+//   ACCORDEON
+
+.why__accordeon {
+
+		width: 50%;
+		float: right;
+
+
+		.why__accordeon__title {
+			height: 39px;
+			margin-bottom: 5px;
+			background: $color_gray;
+			color: $color_black;
+			font: 14px $font_sb;
+			line-height: 39px;
+			text-transform: uppercase;
+			cursor: pointer;
+
+			span {
+				display: inline-block;
+				margin-right: 13px;
+				width: 38px;
+				border-right: 2px solid $color_white;
+				text-align: center;
+			}
+		}
+		
+		
+		.why__accordeon__title-active {
+			background: $color_yellow;
+			color: $color_black;
+
+			span {
+				border-right: 1px solid $color_white;
+			}
+		}
+		
+		
+		
+		.why__accordeon__text  {
+			display: none;
+			margin: 10px 0 20px;
+			padding: 0 10px 0 43px;
+			color: $color_black;
+			font: 13px $font_sb;
+			line-height: 1.5;
+		}
+		
+	} 	
+	
+	
+@include respond(iphone) {.why__accordeon {width: 100%; float: none;}}
+@include respond(l_iphone) {.why__accordeon {width: 100%; float: none;}}
+
+
+.why__protection {
+	
+	text-align: left;
+
+	ul {list-style: none; padding-top: 10px;}
+
+	li {font: 13px $font_sb; padding-left: 5px;}
+
+}
+
+@include respond(iphone) {.why__protection {text-align: center; padding-left: 0;}}
+@include respond(l_iphone) {.why__protection {text-align: center; padding-left: 0;}}
+
+
+
+
+
+.facing {
+
+	margin: 50px 0 0;
+	padding: 10px 0 50px;
+	background: $color_gray;
+	background: url(../img/bg_gray.jpg) repeat;
+	text-align: center;
+
+	p {text-align: left; padding: 0;}
+
+
+}
+
+
+@include respond(ipad)   {.facing {margin: 70px 0; h2 {padding: 60px 0;} }}
+@include respond(l_ipad) {.facing {margin: 70px 0; h2 {padding: 60px 0;} }}
+@include respond(desktop){.facing {margin: 100px 0; h2 {padding: 80px 0;} }}
+
+
+.facing__exampl {padding-top: 50px;}
+
+
+
+@include respond(iphone){
+		.facing__exampl .col-1-2 {    
+			float: none;
+			margin: 10px;
+			padding: 15px;
+			width: 100%;
+	}} 
+
+@include respond(l_iphone){
+		.facing__exampl .col-1-2 {    
+			float: none;
+			margin: 10px;
+			padding: 15px;
+			width: 100%;
+	}} 
+
+
+
+
+
+
+
+.facing__exampl img {width: 280px; max-width: 100%;}
+@include respond(l_iphone){ .facing__exampl img {width: 440px;} }
+@include respond(ipad){ .facing__exampl img {width: 350px;} }
+@include respond(l_ipad){ .facing__exampl img {width: 460px;} }
+@include respond(desktop){ .facing__exampl img {width: 569px;} }

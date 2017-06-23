@@ -1,0 +1,118 @@
+.prices {
+	
+	margin: 10px 0;
+
+	.prices__about {text-align: center;}
+
+
+	.prices__about p { color: $color_green; padding: 0 50px;}
+
+}
+
+
+
+	h5 {
+			margin-top: 20px;
+			padding-right: 10px;
+			text-align: center;
+			color: $color_green;
+			font: 15px $font_sb;
+			text-transform: uppercase;
+
+			span {font: 25px $font_sb;}
+	}
+
+
+
+
+@include respond(l_iphone) {.prices img {width: 400px;}}
+@include respond(ipad) 	   {.prices img {width: 350px;}}
+@include respond(l_ipad)   {.prices img {width: 450px;}}
+@include respond(desktop)  {.prices img {width: 480px;}}
+
+
+
+@include respond(desktop) {.prices__about .col-1-2 p {padding: 0 110px;}}
+
+@include respond(iphone){
+		.prices .col-1-2 {    
+			float: none;
+			margin: 0;
+			width: 100%;
+	}} 
+
+@include respond(l_iphone){
+		.prices .col-1-2 {    
+			float: none;
+			margin: 0;
+			width: 100%;
+	}} 
+
+
+
+.prices .bbut {margin: 20px 0;}
+
+@include respond(l_iphone) {
+	.bbut {
+	width: 250px;
+	margin: 25px 0 200px;
+	font: 33px $font_eb;
+	line-height: 1.1; 
+	}
+}
+
+@include respond(ipad) {
+	.bbut {
+	width: 290px;
+	margin: 40px 0 200px; 
+	font: 38px $font_eb;
+	line-height: 1.1; 
+	}
+}
+
+@include respond(l_ipad) {
+	.bbut {
+	width: 370px;
+	margin: 80px 0 100px; 
+	font: 48px $font_eb;
+	line-height: 1.1;
+	padding: 15px 10px;
+	}
+}
+
+@include respond(desktop) {
+	.bbut {
+	width: 370px;
+	margin: 100px 0 100px; 
+	font: 48px $font_eb;
+	line-height: 1.1;
+	padding: 20px 10px;
+	}
+}
+
+
+
+
+.prices__list {
+	margin: 40px 0;
+	text-align: left;
+
+}
+
+
+.prices__list table {
+	margin: 0 auto;
+    border-top: 1px solid $color_black;
+    font: 12px $font;
+    line-height: 25px;
+    color: $color_black;
+
+    .prices__prices { color: $color_green; font: 15px $font_tit; padding-left: 10px;}
+ }
+
+
+
+
+
+
+

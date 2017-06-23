@@ -1,0 +1,118 @@
+.wincall__overlay, .wincalcul__overlay, .winzakaz__overlay {
+    display: none;
+    text-align: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0; 
+    z-index: 1000;
+    background: rgba(0,0,0,.7);
+  }
+
+  .wincall__overlay::before, .wincalcul__overlay::before, .winzakaz__
+  overlay::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+.wincall, .winzakaz {
+    width: 250px;
+    text-align: center;
+}
+
+
+.wincalcul {
+    width: 265px;
+}
+
+
+  .wincall, .wincalcul, .winzakaz  {
+    display: none; 
+    background: $color_white;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    z-index: 2000;
+  }
+
+
+
+
+.win__top {
+  margin: 0 0 10px;
+  padding: 5px;
+  position: relative;
+  background: $color_green;
+  color: $color_white;
+  
+
+  h5 {color: $color_white;
+      font: 18px $font_tit;}
+}
+
+.wincall__close, .wincalcul__close, .winzakaz__close {position: absolute; top: 5px; right: 5px; cursor: pointer;}
+
+
+
+
+.wincall__box, .wincalcul__box {
+  width: 231px;
+  margin: 0 auto;
+  padding-top: 10px;
+  color: $color_black;
+  text-align: left;
+
+
+  select {width: 147px;}
+
+  label {font: 12px $font; text-transform: none;}
+
+  .bbut {
+    width: 200px;
+    height: 40px;
+    margin: 5px auto;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.wincalcul__box {
+  .bbut {width: 140px;}
+
+  p {
+     font: 11px $font_sb; 
+     margin-bottom: 10px;
+
+     span {color: gray; font: 9px $font; }
+
+  }
+}
+
+
+
+.wincall__box {
+  text-align: center;
+  p {
+     font: 11px $font;
+     margin-bottom: 10px;
+     padding: 5px 10px 10px;
+  }
+}
+
+
+.win__input {
+    outline: none;
+    margin: 5px 0;
+    padding: 3px;
+    
+}
+
+
+
+
