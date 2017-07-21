@@ -24,7 +24,7 @@
 
 	<link rel="stylesheet" type="text/css" href="build/css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script type="text/javascript" src="build/js/main.js"></script>]
+	<script type="text/javascript" src="build/js/main.js"></script>
 
 
 
@@ -356,41 +356,27 @@
 				<div class="prices__list col-1-2">
 					<h5>Толщина металла <span>0.4</span> мм</h5>
 						<table>
-							<tr><td>Односторонний оцинованный профиль</td>
-							<td class="prices__prices">???</td></tr>
 							<tr><td>Односторонний глянцевый полиэстер</td>
-							<td class="prices__prices">25.30</td></tr>
-							<tr><td>Односторонний матовый полиэстер</td>
-							<td class="prices__prices">???</td></tr>
+							<td class="prices__prices">22.00</td></tr>
 							<tr><td>Двусторонний глянцевый полиэстер</td>
-							<td class="prices__prices">???</td></tr>
-							<tr><td>Двусторонний матовый полиэстер</td>
-							<td class="prices__prices">???</td></tr>
+							<td class="prices__prices">24.00</td></tr>
 							<tr><td>Односторонний с покрытием Printech</td>
 							<td class="prices__prices">30.70</td></tr>
+							<tr><td>Printech 3D структурный дуб</td>
+							<td class="prices__prices">32.00</td></tr>
 						</table>
 				</div>
 				<div class="prices__list col-1-2">
 					<h5>Толщина металла <span>0.45</span> мм</h5>
 						<table>
-							<tr><td>Односторонний оцинованный профиль</td>
-							<td class="prices__prices">???</td></tr>
 							<tr><td>Односторонний глянцевый полиэстер</td>
-							<td class="prices__prices">27.60</td></tr>
+							<td class="prices__prices">25.00</td></tr>
 							<tr><td>Односторонний матовый полиэстер</td>
-							<td class="prices__prices">31.45</td></tr>
-							<tr><td>Двусторонний глянцевый полиэстер</td>
-							<td class="prices__prices">37.50</td></tr>
-							<tr><td>Двусторонний матовый полиэстер</td>
-							<td class="prices__prices">???</td></tr>
-							<tr><td>Односторонний с покрытием Printech</td>
-							<td class="prices__prices">???</td></tr>
+							<td class="prices__prices">28.02</td></tr>
 						</table>
 				</div>
-		
-
-
-  	</div>
+        </div>
+  </div>
   </section>
    <section class="works">
     <div class="wrapper" id="a_works">
@@ -534,7 +520,7 @@
 
   		<form id="dillers__form" class="dillers__form">
   			<input type="tel" name="dillers__tel" id="dillers__tel" placeholder="+38(___) ___-__-__" required/>
-  			<button type="submit" name="dillers__submit" class="bbut">Получить предложение</button> 
+  			<button type="submit" id="dillers__submit" name="dillers__submit" class="bbut">Получить предложение</button> 
   		</form>
 
   	</div>
@@ -580,16 +566,16 @@
 
 <!--  Call POPUP   -->
 
-<div class="wincall__overlay">
+<div class="win__overlay" id="wincall">
 
     <div class="wincall">
     	<div class="win__top">
-			<div class="wincall__close">X</div>
+			<div class="win__close">X</div>
 			<h5>Заказать звонок</h5>	
 		</div>
     	<div class="wincall__box">
 
-    		<form action="call.php" method="post" name="wincall_form" id="wincall_form">
+    		<form action="" method="post" name="wincall_form" id="wincall_form">
 		    	<input type="text" required="required" name="wincall_name" 
 		    	placeholder="Ваше имя" class="win__input"> 
 				<input type="tel" required="required" name="wincall_tel" id="wincall_tel"
@@ -609,45 +595,45 @@
 
 <!--  Calculate POPUP   -->
 
-<div class="wincalcul__overlay">
+<div class="win__overlay" id="wincalcul">
 
     <div class="wincalcul">
     	<div class="win__top">
-			<div class="wincalcul__close">X</div>
+			<div class="win__close">X</div>
 			<h5>Расчет стоимости</h5>	
 		</div>
     	<div class="wincalcul__box">
 
-    		<form name="wincalcul_form" id="wincalcul_form">
+    		<form name="wincalcul_form" id="wincalcul_form" action="post">
 		    
 				    	<p>Длина забора, м: <span> например, 80.2 </span><br>
-					    	<input type="text" required="required" name="wincalcul_l" 
+					    	<input type="text" required="required" name="wincalcul_l" id="wincalcul_l"
 					    	placeholder="число в метрах" class="win__input" size="35"/>
 				    	</p>
 				    	<p>Высота забора, м: <span> например, 1.5 </span><br>
-					    	<input type="text" required="required" name="wincalcul_h" 
+					    	<input type="text" required="required" name="wincalcul_h" id="wincalcul_h"
 					    	placeholder="число в метрах" class="win__input" size="35"/>
 						</p>
 					   	<p>Расстояние между планками штакетника, см:
 					   	<span> можно не указывать </span>
 					   	
-					    <input type="text" name="wincalcul_x" 
+					    <input type="text" name="wincalcul_x" id="wincalcul_x"
 					    placeholder="число в сантиметрах" class="win__input" size="35"/>	
 						</p>
 					   	<p>Тип зашивки:<br>   	
-					    	<label><input type="radio" required="required" name="wincalcul_face" class="win__input" checked/>
-					    	Односторонняя</label>&nbsp;&nbsp;&nbsp;&nbsp;
-					    	<label><input type="radio" required="required" name="wincalcul_face" class="win__input"/>
-					    	Двусторонняя</label>
+					    	<input type="radio" required="required" name="wincalcul_face" id="wincalcul_face" value="oneside" class="win__input" checked/>
+					    	<label>Односторонняя</label>&nbsp;&nbsp;&nbsp;&nbsp;
+					    	<input type="radio" required="required" name="wincalcul_face" id="wincalcul_face" value="twoside" class="win__input"/>
+					    	<label>Двусторонняя</label>
 				    	</p>
 				    	<p>Тип покрытия: 
-				    	  <select name="wincalcul_cover" required="required" size="1" 
+				    	  <select name="wincalcul_cover" id="wincalcul_cover" required="required" size="1" 
 				    	  class="win__input">
 				    	  	<option value="" selected>Выберите</option>
 						    <option value="cover1">глянцевый односторонний</option>
 						    <option value="cover2">глянцевый двусторонний</option>
 						    <option value="cover3">матовый односторонний</option>
-						    <option value="cover3">покрытие Printech</option>
+						    <option value="cover4">покрытие Printech</option>
 					      </select>
 					   </p>
 						<center><button id="wincalcul_submit" type="submit" class="bbut">Рассчитать</button></center>
@@ -664,18 +650,22 @@
 
 <!--  Zakaz POPUP   -->
 
-<div class="winzakaz__overlay">
+<div class="win__overlay" id="winzakaz">
 
     <div class="winzakaz">
     	<div class="win__top">
-			<div class="winzakaz__close">X</div>
+			<div class="win__close">X</div>
 			<h5>Заказать штакетник</h5>	
 		</div>
     	<div class="wincalcul__box">
-    		<p>Где-то здесь нужно выдать результаты расчета. 
-    		И предложить сделать заказ.</p>
+    		<p>Длина забора, м: <span id="zakaz_l"></span></p>
+    		<p>Высота забора, м: <span id="zakaz_h"></span></p>
+    		<p>Расстояние между планками штакетника, см: <span id="zakaz_x"></span></p>
+    		<p>Тип зашивки: <span id="zakaz_face"></span></p>
+    		<p>Тип покрытия: <span id="zakaz_cover"></span></p>
+    		<p>Стоимость, грн: <span id="zakaz_calc"></span></p>
 
-    		<form action="zakaz.php" method="post" name="winzakaz_form" id="winzakaz_form">
+    		<form action="" method="post" name="winzakaz_form" id="winzakaz_form">
 					
 					<input type="text" required="required" name="winzakaz_name" 
 					placeholder="Ваше имя" class="win__input" size="26"/> 
@@ -686,7 +676,7 @@
 					class="win__input" size="26"/>
 					<input type="text" name="wincall_vopros" 
 					placeholder="Удобное время звонка" class="win__input" size="26"/> 
-					<center><button id="winzakaz_submit" type="submit" class="bbut">Заказать</button></center>
+					<center><button id="winzakaz_submit" type="submit" class="bbut">Заказать</button><input id="winzakaz_recalc" type="button" class="bbut" value="Новый расчет"></center>
 
 		    </form>
     	 <p>Ваши данные останутся конфиденциальными и не будут переданы третьим лицам!</p>
@@ -694,6 +684,20 @@
 
     </div>
 
+</div>
+
+<!--  Send mail POPUP   -->
+<div class="win__overlay" id="winsendmail">
+    <div class="wincalcul">
+    	<div class="win__top">
+			<div class="win__close">X</div>
+			<h5 class="win__header">Заказ принят</h5>	
+		</div>
+    	<div class="wincalcul__box">
+    	    <p class="win__text">Ваш заказ принят! Наш менеджер свяжется с Вами в ближайшее время.</p>
+    		<center><input type="button" class="bbut win__newcalc" value="Новый расчет"><input type="button" class="bbut win__ok" value="Закрыть"></center>
+    	</div>
+    </div>
 </div>
 
 

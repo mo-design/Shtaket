@@ -1,4 +1,7 @@
-.wincall__overlay, .wincalcul__overlay, .winzakaz__overlay {
+.win__overlay,
+.wincalcul__overlay,
+.wincall__overlay,
+.winzakaz__overlay {
     display: none;
     text-align: center;
     position: fixed;
@@ -10,8 +13,10 @@
     background: rgba(0,0,0,.7);
   }
 
-  .wincall__overlay::before, .wincalcul__overlay::before, .winzakaz__
-  overlay::before {
+.win__overlay::before,
+.wincalcul__overlay::before,
+.wincall__overlay::before,
+.winzakaz__ overlay::before {
     content: '';
     display: inline-block;
     height: 100%;
@@ -29,15 +34,16 @@
 }
 
 
-  .wincall, .wincalcul, .winzakaz  {
-    display: none; 
-    background: $color_white;
+.win,
+.wincalcul,
+.wincall,
+.winzakaz  {
+    background: #fff;
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    z-index: 2000;
+    z-index: 2000
   }
-
 
 
 
@@ -46,19 +52,24 @@
   padding: 5px;
   position: relative;
   background: $color_green;
-  color: $color_white;
   
 
   h5 {color: $color_white;
       font: 18px $font_tit;}
 }
 
-.wincall__close, .wincalcul__close, .winzakaz__close {position: absolute; top: 5px; right: 5px; cursor: pointer;}
+.win__close,
+.wincalcul__close,
+.wincall__close,
+.winzakaz__close 
+{position: absolute; top: 5px; right: 5px; cursor: pointer;}
 
 
 
 
-.wincall__box, .wincalcul__box {
+.win__box,
+.wincalcul__box,
+.wincall__box  {
   width: 231px;
   margin: 0 auto;
   padding-top: 10px;
@@ -69,6 +80,8 @@
   select {width: 147px;}
 
   label {font: 12px $font; text-transform: none;}
+
+
 
   .bbut {
     width: 200px;
@@ -89,7 +102,7 @@
      font: 11px $font_sb; 
      margin-bottom: 10px;
 
-     span {color: gray; font: 9px $font; }
+     span {color: $color_green; font: 11px $font_sb; }
 
   }
 }

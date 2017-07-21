@@ -126,7 +126,6 @@
 .fon {
 	    background: url(../img/fon_w1.jpg);
  		background-repeat: no-repeat;
-		background-size: fixed;
 		background-position: top;
 		text-align: center;
 		height: 260px;
@@ -138,7 +137,6 @@
 @include respond(l_iphone) 	{
 	.fon {background: url(../img/fon_w2.jpg);
 		background-repeat: no-repeat;
-		background-size: fixed;
 		background-position: top;
 		height: 300px;
 		}
@@ -147,7 +145,6 @@
 @include respond(ipad) 	{
 	.fon {background: url(../img/fon_w3.jpg);
 		background-repeat: no-repeat;
-		background-size: fixed;
 		background-position: top;
 		height: 370px;
 		}
@@ -156,7 +153,6 @@
 @include respond(l_ipad) 	{
 	.fon {background: url(../img/fon_w4.jpg);
 		background-repeat: no-repeat;
-		background-size: fixed;
 		background-position: top;
 		height: 470px;
 		}
@@ -166,7 +162,6 @@
 @include respond(desktop) 	{
 	.fon {background: url(../img/fon_w5.jpg);
 		background-repeat: no-repeat;
-		background-size: fixed;
 		background-position: top;
 		height: 620px;
 	}
@@ -176,12 +171,12 @@
 h1 {
 	color: $color_white;
 	font: 20px $font_tit;
-	padding-top: 40px;
+	padding-top: 50px;
 
 	span {color: $color_yellow;}
 }
 
-@include respond(l_iphone) {h1{font: 32px $font_tit; padding-top: 20px;}}
+@include respond(l_iphone) {h1{font: 32px $font_tit; padding-top: 33px;}}
 @include respond(ipad)     {h1{font: 48px $font_tit; padding-top: 5px;}}
 @include respond(l_ipad)   {h1{font: 60px $font_tit; padding-top: 5px;}}
 @include respond(desktop)  {h1{font: 65px $font_tit; padding-top: 0;}}
@@ -268,6 +263,8 @@ h1 {
 	background: $color_white;
 	box-shadow: 2px 1px 20px -1px rgba(0,0,0,0.75);
 	overflow: hidden;
+
+	h2 {display: none;}
 
 	@include respond(iphone){
 		.col-1-3{    
