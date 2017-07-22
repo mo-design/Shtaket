@@ -62,13 +62,15 @@
 .wincalcul__close,
 .wincall__close,
 .winzakaz__close 
-{position: absolute; top: 5px; right: 5px; cursor: pointer;}
+{position: absolute; top: 5px; right: 5px; cursor: pointer; color: $color_white;}
 
 
 
 
 .win__box,
 .wincalcul__box,
+.wincalcul__rez,
+.win__datas,
 .wincall__box  {
   width: 231px;
   margin: 0 auto;
@@ -95,6 +97,8 @@
   }
 }
 
+
+
 .wincalcul__box {
   .bbut {width: 140px;}
 
@@ -102,18 +106,35 @@
      font: 11px $font_sb; 
      margin-bottom: 10px;
 
-     span {color: $color_green; font: 11px $font_sb; }
+     span {color: gray; font: 9px $font; }
 
   }
 }
 
 
 
-.wincall__box {
+.wincalcul__rez {
+  margin-bottom: 10px;
+
+  .bbut {width: 160px; margin-bottom: 4px; }
+
+  p {
+     font: 11px $font_sb; 
+     margin-bottom: 10px;
+
+     span {color: $color_green; font: 11px $font_eb; }
+
+  }
+}
+
+
+
+
+
+.win__datas, .wincall__box {
   text-align: center;
   p {
      font: 11px $font;
-     margin-bottom: 10px;
      padding: 5px 10px 10px;
   }
 }

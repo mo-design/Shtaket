@@ -630,10 +630,12 @@
 				    	  <select name="wincalcul_cover" id="wincalcul_cover" required="required" size="1" 
 				    	  class="win__input">
 				    	  	<option value="" selected>Выберите</option>
-						    <option value="cover1">глянцевый односторонний</option>
-						    <option value="cover2">глянцевый двусторонний</option>
-						    <option value="cover3">матовый односторонний</option>
-						    <option value="cover4">покрытие Printech</option>
+						    <option value="cover1">глянцевый односторонний 0.4</option>
+						    <option value="cover2">глянцевый односторонний 0.45</option>
+						    <option value="cover3">глянцевый двусторонний</option>
+						    <option value="cover4">матовый односторонний</option>
+						    <option value="cover5">покрытие Printech</option>
+						    <option value="cover6">Printech 3D структур. дуб</option>
 					      </select>
 					   </p>
 						<center><button id="wincalcul_submit" type="submit" class="bbut">Рассчитать</button></center>
@@ -657,12 +659,14 @@
 			<div class="win__close">X</div>
 			<h5>Заказать штакетник</h5>	
 		</div>
-    	<div class="wincalcul__box">
+    	<div class="wincalcul__rez">
     		<p>Длина забора, м: <span id="zakaz_l"></span></p>
     		<p>Высота забора, м: <span id="zakaz_h"></span></p>
     		<p>Расстояние между планками штакетника, см: <span id="zakaz_x"></span></p>
     		<p>Тип зашивки: <span id="zakaz_face"></span></p>
     		<p>Тип покрытия: <span id="zakaz_cover"></span></p>
+    		<p>Кол-во штакетин, шт: <span id="zakaz_kolvo"></span></p>
+    		<p>Кол-во погонных метров: <span id="zakaz_pogmet"></span></p>
     		<p>Стоимость, грн: <span id="zakaz_calc"></span></p>
 
     		<form action="" method="post" name="winzakaz_form" id="winzakaz_form">
@@ -676,10 +680,13 @@
 					class="win__input" size="26"/>
 					<input type="text" name="wincall_vopros" 
 					placeholder="Удобное время звонка" class="win__input" size="26"/> 
-					<center><button id="winzakaz_submit" type="submit" class="bbut">Заказать</button><input id="winzakaz_recalc" type="button" class="bbut" value="Новый расчет"></center>
+					<div class="center">
+						<button id="winzakaz_submit" type="submit" class="bbut">Заказать</button>
+						<input id="winzakaz_recalc" type="button" class="bbut" value="Новый расчет">
+					</div>
 
 		    </form>
-    	 <p>Ваши данные останутся конфиденциальными и не будут переданы третьим лицам!</p>
+    	 <div class="win__datas"><p>Ваши данные останутся конфиденциальными и не будут переданы третьим лицам!</p></div>
     	</div>
 
     </div>
@@ -693,9 +700,10 @@
 			<div class="win__close">X</div>
 			<h5 class="win__header">Заказ принят</h5>	
 		</div>
-    	<div class="wincalcul__box">
-    	    <p class="win__text">Ваш заказ принят! Наш менеджер свяжется с Вами в ближайшее время.</p>
-    		<center><input type="button" class="bbut win__newcalc" value="Новый расчет"><input type="button" class="bbut win__ok" value="Закрыть"></center>
+    	<div class="win__datas">
+    	   		<p>Ваш заказ принят! Наш менеджер свяжется с Вами в ближайшее время.</p>
+    			<input type="button" class="bbut win__newcalc" value="Новый расчет">
+    			<input type="button" class="bbut win__ok" value="Закрыть">
     	</div>
     </div>
 </div>

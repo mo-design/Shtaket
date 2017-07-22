@@ -1550,15 +1550,20 @@
 
 } )( window, document );
 //Установка начальных переменных
-var calc = 0;
+
+var kolvo = 0;   // количество штакетин
+var pogmet = 0;  // количество погонных метров
+var calc = 0;    // общая стоимость
 var dist_x = {};
 var price = {};
-dist_x['oneside'] = 4.7;
-dist_x['twoside'] = 6.5;
+dist_x['oneside'] = 0.047;
+dist_x['twoside'] = 0.09;
 price['cover1'] = 22.00;
-price['cover2'] = 24.00;
-price['cover3'] = 28.02;
-price['cover4'] = 30.70;
+price['cover2'] = 25.00;
+price['cover3'] = 24.00;
+price['cover4'] = 28.02;
+price['cover5'] = 30.70;
+price['cover6'] = 32.00;
 
 var l = 0;
 var h = 0;
@@ -1821,7 +1826,7 @@ $('.responds__slider').slick({
                 //код в этом блоке выполняется при успешной отработке php-скрипта
                 if (html == 'true') {
                     $('#winsendmail .win__header').html('Запрос отправлен');
-                    $('#winsendmail .win__text').html('Ваш запрос на обратный звонок отправлен! Наш менеджер свяжется с Вами в ближайшее время.');
+                    $('#winsendmail .win__text').html('Ваш запрос на обратный звонок отправлен! Наш менеджер свяжется с Вами в указанное время.');
                     $('#winsendmail .win__newcalc').hide();
                     $('#wincall').hide();
                     $('#winsendmail').show();
@@ -1860,22 +1865,11 @@ $('.responds__slider').slick({
         } 
     });
     
-//Modal windows zakaz
-//debug send order
-/*if (face == 'oneside')
-    calc = price[cover] * h * l / (0.13 + x);
-if (face == 'twoside')
-    calc = price[cover] * h * ( 2 * l / (0.13 + x) - 1);
-calc = calc.toFixed(2);
-$('#zakaz_l').html(l);
-$('#zakaz_h').html(h);
-$('#zakaz_x').html(x * 100);
-$('#zakaz_face').html(face_text);
-$('#zakaz_cover').html(cover_text);
-$('#zakaz_calc').html(calc);
-$('#winzakaz').show();*/
-//$('#winsendmail').show();
-//End debug
+
+
+
+
+
     
     $("#winzakaz .win__close").click(function(){
         $("#winzakaz").hide(500);
@@ -1894,7 +1888,7 @@ $('#winzakaz').show();*/
     
     $('#winzakaz_form').submit(function() {
         var form_data = $(this).serialize(); //собераем все данные из формы
-        form_data = form_data + '&action=zakaz&l=' + l + '&h=' + h + '&x=' + x + '&face_text=' + face_text + '&cover_text=' + cover_text + '&calc=' + calc;
+        form_data = form_data + '&action=zakaz&l=' + l + '&h=' + h + '&x=' + x + '&face_text=' + face_text + '&cover_text=' + cover_text + '&kolvo=' + kolvo + '&pogmet=' + pogmet + '&calc=' + calc;
         //alert(form_data);
         $.ajax({
             type: "POST", //Метод отправки
@@ -1979,18 +1973,28 @@ $('#winzakaz').show();*/
             x = dist_x[$('#wincalcul_face:checked').val()];
         else
             x = x / 100;
-        
+   
+
+
+
+
         //расчет стоимости
-        //односторонняя зашивка, формула:   Стоимость = price*h*l/(0.13+x)
-        //двухсторонняя зашивка, формула:   Стоимость = price*h*(2*l/(0.13+x)-1)
+
+
         face = $('#wincalcul_face:checked').val();
         face_text = $('#wincalcul_face:checked+label').text();
         cover = $('#wincalcul_cover').val();
         cover_text = $('#wincalcul_cover option:selected').text();
-        if (face == 'oneside')
-            calc = price[cover] * h * l / (0.13 + x);
-        if (face == 'twoside')
-            calc = price[cover] * h * ( 2 * l / (0.13 + x) - 1);
+        if (face == 'oneside') 
+            kolvo = l / (0.13 + x);
+
+        if (face == 'twoside') 
+            kolvo = 2 * l / (0.13 + x) - 1;
+
+        kolvo = Math.round(kolvo);
+        pogmet = h * kolvo;
+        calc = price[cover] * h * kolvo;
+        pogmet = pogmet.toFixed(2);   
         calc = calc.toFixed(2);
         
         //Вывод стоимости в окно заказа
@@ -1999,6 +2003,8 @@ $('#winzakaz').show();*/
         $('#zakaz_x').html(x * 100);
         $('#zakaz_face').html(face_text);
         $('#zakaz_cover').html(cover_text);
+        $('#zakaz_kolvo').html(kolvo);
+        $('#zakaz_pogmet').html(pogmet);
         $('#zakaz_calc').html(calc);
         //Вывод окна заказа
         $("#wincalcul").hide();
