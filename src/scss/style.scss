@@ -4,6 +4,7 @@
 @import 'components/normalize';
 @import 'components/vars';
 @import 'components/fonts';
+@import 'components/animate';
 @import 'components/slick';
 @import 'components/slick-theme';
 @import 'components/setka';
@@ -34,3 +35,11 @@ body {
 
 
 .center {margin: 0 auto; text-align: center;}
+
+.hidden{
+opacity:0;
+}
+
+.visible{
+opacity:1;
+}

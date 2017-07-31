@@ -55,8 +55,8 @@ switch($_POST['action']) {
                         <title>'.$subject.'</title>
                     </head>
                     <body>
-                        <p>Имя: '.$_POST['winzakaz_name'].'</p>
-                        <p>Телефон: '.$_POST['wincalcul_tel'].'</p>
+                        <p>Имя: '.$_POST['wincall_name'].'</p>
+                        <p>Телефон: '.$_POST['wincall_tel'].'</p>
                         <p>Время: '.$_POST['wincall_vopros'].'</p>
                     </body>
                 </html>';

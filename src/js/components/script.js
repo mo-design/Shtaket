@@ -44,6 +44,53 @@ $('a[href^="#"]').bind('click.smoothscroll',function (e) {
 
 
 
+/*Выход div*/
+
+
+$('#pluses').viewportChecker({
+    classToAdd: 'animated_fast fadeInUp',
+    offset: 100
+});
+
+
+
+$('#a_product').viewportChecker({
+    classToAdd: 'animated fadeIn',
+    offset: 100
+});
+
+
+
+
+$('#facing').viewportChecker({
+    classToAdd: 'animated fadeIn',
+    offset: 100
+});
+
+
+$('#design').viewportChecker({
+    classToAdd: 'animated fadeIn',
+    offset: 100
+});
+
+
+$('#a_works').viewportChecker({
+    classToAdd: 'animated fadeIn',
+    offset: 100
+});
+
+
+$('#a_manufact').viewportChecker({
+    classToAdd: 'animated_fast fadeInUp',
+    offset: 100
+});
+
+$('#a_dillers').viewportChecker({
+    classToAdd: 'animated fadeIn',
+    offset: 100
+});
+
+
 
 
 
@@ -242,6 +289,10 @@ $('.responds__slider').slick({
         return false;
     });
 
+
+
+
+
 //Modal window call
 
     $('#call').click(function(){
@@ -264,7 +315,7 @@ $('.responds__slider').slick({
     });
     
     $('#wincall_form').submit(function() {
-        var form_data = $(this).serialize(); //собераем все данные из формы
+        var form_data = $(this).serialize(); //собираем все данные из формы
         form_data = form_data + '&action=callback';
         $.ajax({
             type: "POST", //Метод отправки
