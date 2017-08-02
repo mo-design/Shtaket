@@ -117,7 +117,7 @@ $('#wincalcul_tel').mask("+38(999) 999-99-99");
 				$('.why__accordeon__text').slideUp();
 				$('.why__accordeon__title').removeClass('why__accordeon__title-active');
 				$(this).addClass('why__accordeon__title-active');
-				$(this).children('span').html('-');
+				$(this).children('span').html('&and;');
 				$(this).next().slideDown();
 			}
 		});
@@ -222,7 +222,7 @@ $('.prtech__slider').slick({
 
 
 $('.responds__slider').slick({
-  dots: true,
+  dots: false,
   infinite: true,
   speed: 300,
   slidesToShow: 3,

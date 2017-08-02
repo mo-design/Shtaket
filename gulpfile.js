@@ -19,7 +19,7 @@ var gulp = require('gulp'),
    
    gulp.task('script:build', function() {
     return gulp.src('./src/js/main.js')
-    //.pipe(uglify()) 
+    .pipe(uglify()) 
     .pipe(gulp.dest('./build/js'));
     });
 
