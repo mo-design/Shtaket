@@ -3,7 +3,6 @@
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
-    watch = require('gulp-watch'),
     autoprefixer = require('gulp-autoprefixer'),
     sass = require('gulp-sass'),
     cssmin = require('gulp-minify-css');
@@ -43,24 +42,6 @@ gulp.task('build', [
     'script:build',
     'style:build'
 ]);
-
-
-gulp.task('sass:watch', function () {
-  gulp.watch('./src/scss/**/*.scss', ['style:build']);
-});
-
-
-
-gulp.task('script:watch', function () {
-  gulp.watch('./src/js/*.js', ['script', 'script:build']);
-});
-
-
-gulp.task('watch', [
-    'sass:watch',
-    'script:watch'
-]);
-
 
 
 gulp.task('default', ['build']);

@@ -1,6 +1,6 @@
 <?php
 
-$to = 'maximova.olga@gmail.com,mo.design@ukr.net'; //Почта получателя, через запятую можно указать сколько угодно адресов
+$to = 'maximova.olga@gmail.com'; //Почта получателя, через запятую можно указать сколько угодно адресов
 $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
 $headers .= "From: shtaket.com.ua <site@shtaket.com.ua>\r\n"; //Наименование и почта отправителя
             
@@ -14,20 +14,23 @@ switch($_POST['action']) {
                         <title>'.$subject.'</title>
                     </head>
                     <body>
+                    	<p>КОНТАКТНЫЕ ДАННЫЕ ЗАКАЗЧИКА:</p>
                         <p>Имя: '.$_POST['winzakaz_name'].'</p>
                         <p>Телефон: '.$_POST['wincalcul_tel'].'</p>
                         <p>E-mail: '.$_POST['wincalcul_email'].'</p>
-                        <p>Время: '.$_POST['wincall_vopros'].'</p>
-                        <p>l: '.$_POST['l'].'</p>
-                        <p>h: '.$_POST['h'].'</p>
-                        <p>x: '.$_POST['x'].'</p>
+                        <p>Удобное время звонка: '.$_POST['wincall_vopros'].'</p>
+                        <br><br>
+                        <p>ПРЕДВАРИТЕЛЬНЫЙ РАСЧЕТ:</p>
+                        <p>Длина забора: '.$_POST['l'].'</p>
+                        <p>Высота забора: '.$_POST['h'].'</p>
+                        <p>Расстояние между планками: '.$_POST['x'].'</p>
                         <p>Тип зашивки: '.$_POST['face_text'].'</p>
                         <p>Тип покрытия: '.$_POST['cover_text'].'</p>
                         <p>Кол-во штакетин: '.$_POST['kolvo'].'</p>
                         <p>Кол-во погонных метров: '.$_POST['pogmet'].'</p>
                         <p>Цена: '.$_POST['calc'].'</p>
                     </body>
-                </html>'; //Текст нащего сообщения можно использовать HTML теги
+                </html>'; //Текст нашего сообщения можно использовать HTML теги
         }
         break;
         
@@ -40,6 +43,7 @@ switch($_POST['action']) {
                         <title>'.$subject.'</title>
                     </head>
                     <body>
+                    	<p>ЗАЯВКА НА СОТРУДНИЧЕСТВО ПО РЕАЛИЗАЦИИ ПРОДУКЦИИ:</p>
                         <p>Телефон: '.$_POST['dillers__tel'].'</p>
                     </body>
                 </html>';
@@ -55,9 +59,10 @@ switch($_POST['action']) {
                         <title>'.$subject.'</title>
                     </head>
                     <body>
+                    	<p>ЗАЯВКА НА ОБРАТНЫЙ ЗВОНОК:</p>
                         <p>Имя: '.$_POST['wincall_name'].'</p>
                         <p>Телефон: '.$_POST['wincall_tel'].'</p>
-                        <p>Время: '.$_POST['wincall_vopros'].'</p>
+                        <p>Удобное время звонка: '.$_POST['wincall_vopros'].'</p>
                     </body>
                 </html>';
         }

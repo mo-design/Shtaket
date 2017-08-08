@@ -7,7 +7,7 @@ footer {
 	h2 {color: $color_white;}
 
 	p {
-		font: 13px $font;
+		font: 14px $font;
 		color: $color_white; 
 		padding: 5px 0; 
 		text-align: left;
@@ -18,20 +18,54 @@ footer {
 
 
 
-.adress_tel  {font: 15px $font;}
-.adress_city {
-	        text-transform: uppercase; 
-			font: 14px $font; 
-			padding-bottom: 3px;}
-
-.ri1 {
-	float: right;
-	display: inline-block;
-	padding-right: 50px;
-}
-
-.ri2 {padding-left: 50px;}
+.adress_city {text-transform: uppercase;}
 
 
-@include respond(iphone){footer p {text-align: center; } .ri1, .ri2 {float: none; padding: 0;} }
-@include respond(l_iphone){footer p {text-align: center; } .ri1, .ri2 {float: none; padding: 0;} }
+.ri1, .ri2 {display: inline-block;}
+
+
+.ri1 {float: right; padding-right: 40px;}
+.ri2 {float: left; padding-left: 40px;}
+
+
+
+@include respond(iphone) {
+		footer .col-1-2 {    
+			float: none;
+			width: 100%;
+			.ri1, .ri2 {float: none; padding: 0;}
+			p {text-align: center; }
+		}
+
+		footer .col-1-2 {    
+			float: none;
+			width: 100%;
+			.ri1, .ri2 {float: none; padding: 0;}
+			p {text-align: center; }
+		}
+
+	}
+
+
+
+
+
+
+@include respond(l_iphone) {
+
+		footer .col-1-2 {    
+			float: none;
+			width: 100%;
+			.ri1, .ri2 {float: none; padding: 0;}
+			p {text-align: center; }
+		}
+
+		footer .col-1-2 {    
+			float: none;
+			width: 100%;
+			.ri1, .ri2 {float: none; padding: 0;}
+			p {text-align: center; }
+		}
+
+
+	}
