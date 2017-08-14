@@ -1,6 +1,6 @@
 <?php
 
-$to = 'maximova.olga@gmail.com'; //Почта получателя, через запятую можно указать сколько угодно адресов
+$to = 'maximova.olga@gmail.com, donprofil.com@gmail.com'; //Почта получателя, через запятую можно указать сколько угодно адресов
 $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
 $headers .= "From: shtaket.com.ua <site@shtaket.com.ua>\r\n"; //Наименование и почта отправителя
             
