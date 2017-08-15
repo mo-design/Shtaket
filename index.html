@@ -702,17 +702,17 @@
 		    
 				    	<p>Длина забора, м: <span> например, 80.2 </span><br>
 					    	<input type="text" required="required" name="wincalcul_l" id="wincalcul_l"
-					    	placeholder="число в метрах" class="win__input" size="35"/>
+					    	placeholder="число в метрах" class="win__input"/>
 				    	</p>
 				    	<p>Высота забора, м: <span> например, 1.5 </span><br>
 					    	<input type="text" required="required" name="wincalcul_h" id="wincalcul_h"
-					    	placeholder="число в метрах" class="win__input" size="35"/>
+					    	placeholder="число в метрах" class="win__input"/>
 						</p>
-					   	<p>Расстояние между планками штакетника, см:
-					   	<span> можно не указывать </span>
+					   	<p>Расстояние между планками <br>штакетника, см:
+					   	<span> можно не указывать </span><br>
 					   	
 					    <input type="text" name="wincalcul_x" id="wincalcul_x"
-					    placeholder="число в сантиметрах" class="win__input" size="35"/>	
+					    placeholder="число в сантиметрах" class="win__input"/>	
 						</p>
 					   	<p>Тип зашивки:<br>   	
 					    	<input type="radio" required="required" name="wincalcul_face" id="wincalcul_face" 
@@ -769,17 +769,19 @@
     		<form method="post" name="winzakaz_form" id="winzakaz_form">
 					
 					<input type="text" required="required" name="winzakaz_name" 
-					placeholder="Ваше имя" class="win__input" size="26"/> 
+					placeholder="Ваше имя" class="win__input"/> 
 					<input type="text" required="required" name="wincalcul_email" 
-					placeholder="Ваш E-mail адрес" class="win__input" size="26"/>
+					placeholder="Ваш E-mail адрес" class="win__input"/>
 					<input type="tel" required="required" name="wincalcul_tel" 
 					id="wincalcul_tel" placeholder="+38(___) ___-__-__" 
 					class="win__input" size="26"/>
 					<input type="text" name="wincall_vopros" 
-					placeholder="Удобное время звонка" class="win__input" size="26"/> 
+					placeholder="Удобное время звонка" class="win__input"/>
+
+
 					<div class="center">
 						<button id="winzakaz_submit" type="submit" class="bbut">Заказать</button>
-						<input id="winzakaz_recalc" type="button" class="bbut" value="Новый расчет">
+						<button id="winzakaz_recalc" type="submit" class="bbut">Новый расчет</button>
 					</div>
 
 		    </form>

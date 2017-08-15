@@ -23,16 +23,18 @@
     vertical-align: middle;
   }
 
-.wincall, .winzakaz {
-    width: 250px;
+.wincall, .winzakaz, .win__datas {
+    width: 260px;
     text-align: center;
 }
 
 
-.wincalcul {
-    width: 265px;
-}
+#winzakaz_form input {width: 230px;}
+#wincall_form input {width: 210px;}
 
+
+
+#wincalcul_l, #wincalcul_h, #wincalcul_x {width: 230px;}
 
 .win,
 .wincalcul,
@@ -72,11 +74,11 @@
 .wincalcul__rez,
 .win__datas,
 .wincall__box  {
-  width: 231px;
   margin: 0 auto;
-  padding-top: 10px;
+  padding: 5px 15px 0;
   color: $color_black;
   text-align: left;
+
 
 
   select {width: 147px;}
@@ -135,7 +137,7 @@
   text-align: center;
   p {
      font: 11px $font;
-     padding: 5px 10px 10px;
+     padding: 0 10px 10px;
   }
 }
 

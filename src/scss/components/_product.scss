@@ -203,7 +203,7 @@ h3 {
 	}} 
 
 
-
+@include respond(desktop) {.facing__exampl p {padding: 0 55px;}}
 
 
 
@@ -211,7 +211,8 @@ h3 {
 @include respond(l_iphone){ .facing__exampl img {width: 440px;} }
 @include respond(ipad){ .facing__exampl img {width: 350px;} }
 @include respond(l_ipad){ .facing__exampl img {width: 460px;} }
-@include respond(desktop){ .facing__exampl img {width: 569px;} }
+
+@include respond(desktop){ .facing__exampl img {width: 470px;} }
 
 
 .facing__shema img {width: 280px; height: auto; max-width: 100%;}
